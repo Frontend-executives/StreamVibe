@@ -1,4 +1,4 @@
-![logo.svg](public%2Flogo.svg)
+![logo.svg](public%2Fimages%2Flogo.svg)
 
 # StreamVibe - онлайн кинотеатр
 
