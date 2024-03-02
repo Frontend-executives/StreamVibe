@@ -32,6 +32,7 @@
     "react-hooks",
     "import",
     "unused-imports",
+    "jest",
     "prettier"
   ],
   "rules": {
@@ -51,19 +52,28 @@
         "code": 120
       }
     ],
-    "object-curly-spacing": ["error", "always"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "react/jsx-curly-spacing": [
       "error",
       {
         "when": "never"
       }
     ],
-    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
     "react/jsx-sort-props": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/jsx-key": "error",
     "jsx-a11y/media-has-caption": "warn",
-    "jsx-quotes": ["error", "prefer-single"],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
     "react/react-in-jsx-scope": "off",
     "import/no-extraneous-dependencies": "error",
     "import/no-named-as-default-member": "error",
@@ -76,10 +86,19 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "pathGroupsExcludedImportTypes": ["builtin"],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
         "newlines-between": "always",
         "warnOnUnassignedImports": true,
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
         "pathGroups": [
           {
             "pattern": "**/?(*)app{,/**}",
@@ -137,7 +156,10 @@
     "typescript-sort-keys/interface": "error",
     "typescript-sort-keys/string-enum": "error",
     "semi": "off",
-    "quotes": ["error", "single"]
+    "quotes": [
+      "error",
+      "single"
+    ]
   },
   "settings": {
     "react": {
@@ -148,5 +170,22 @@
         "alwaysTryTypes": true
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.test.ts",
+        "*.test.tsx",
+        "setupTests.ts"
+      ],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }
