@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![logo.svg](public%2Flogo.svg)
 
-## Getting Started
+# StreamVibe - онлайн кинотеатр
 
-First, run the development server:
+### [Ссылка на дизайн в Figma](https://www.figma.com/file/Yoys5VvZfSvpweIrBHC4mB/OTT-Dark-Theme-Website-UI-Design-Template-for-Media-Streaming%2C-Movies-and-TV-(-FREE-Editable-)-(Community)-(Copy)?type=design&node-id=34-919&mode=design&t=MRPqVq62CcwRAj52-0)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Стек технологий проекта
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `Next.js (App router & server components)` `TypeScript` `MobX`
+- `TailWind` `PostCss`
+- `ESLint` `Husky` `Lint-staged` `Prettier`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Как запускать?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Убедитесь что у вас установлен `node`
 
-## Learn More
+2. Выполните команду `npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+3. Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть результат
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Запуск линтеров
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`npm run lint`
 
-## Deploy on Vercel
+### Проверка типов
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`npm run typecheck`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Форматирование файлов
+
+`npm run format`
+
+### Сборка
+
+`npm run build`
