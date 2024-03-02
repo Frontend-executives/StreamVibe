@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "typecheck": "tsc --module esnext --noEmit",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:memory": "jest --runInBand --logHeapUsage"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
