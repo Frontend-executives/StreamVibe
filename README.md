@@ -2,7 +2,7 @@
 
 # StreamVibe - онлайн кинотеатр
 
-### [Ссылка на дизайн в Figma](https://www.figma.com/file/Yoys5VvZfSvpweIrBHC4mB/OTT-Dark-Theme-Website-UI-Design-Template-for-Media-Streaming%2C-Movies-and-TV-(-FREE-Editable-)-(Community)-(Copy)?type=design&node-id=34-919&mode=design&t=MRPqVq62CcwRAj52-0)
+### [Ссылка на дизайн в Figma](https://www.figma.com/community/file/1294589591426976269)
 
 ## Стек технологий проекта
 

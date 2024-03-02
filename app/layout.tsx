@@ -19,7 +19,7 @@ export default function RootLayout({
 }>): ReactElement {
   return (
     <html lang='en'>
-      <body className={cx(inter.className, 'bg-black text-white')}>{children}</body>
+      <body className={cx(inter.className, 'bg-size bg-black')}>{children}</body>
     </html>
   )
 }

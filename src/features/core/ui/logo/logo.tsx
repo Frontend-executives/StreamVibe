@@ -7,8 +7,16 @@ const logo = 'mobile:w-[116px] mobile:h-[36px] tablet:w-[166px] tablet:h-[50px] 
 
 export const Logo = (): ReactElement => {
   return (
-    <Link className={link} href='/'>
-      <Image alt='logo' className={logo} draggable={false} height={60} priority={true} src='/logo.svg' width={200} />
+    <Link className={link} href='/public'>
+      <Image
+        alt='StreamVibe logo'
+        className={logo}
+        draggable={false}
+        height={60}
+        priority={true}
+        src='/images/logo.svg'
+        width={200}
+      />
     </Link>
   )
 }

@@ -1,13 +1,5 @@
 {
-  "src/**/*": [
-    "prettier --write",
-    "eslint"
-  ],
-  "app/**/*.{ts,tsx}": [
-    "prettier --write",
-    "eslint"
-  ],
-  "app/**/*.{css,scss}": [
-    "prettier --write"
-  ]
+  "src/**/*": ["prettier --write", "eslint"],
+  "app/**/*.{ts,tsx}": ["prettier --write", "eslint"],
+  "app/**/*.{css,scss}": ["prettier --write"]
 }
