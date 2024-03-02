@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: 'Онлайн кинотеатр',
 }
 
+const body = cx(inter.className, 'bg-ui-black-8 text-white')
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>): ReactElement {
   return (
     <html lang='ru'>
-      <body className={cx(inter.className, 'bg-size bg-black')}>{children}</body>
+      <body className={body}>{children}</body>
     </html>
   )
 }
