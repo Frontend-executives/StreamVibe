@@ -4,6 +4,8 @@
 
 ### [Ссылка на дизайн в Figma](https://www.figma.com/community/file/1294589591426976269)
 
+### [Ссылка на деплой](https://stream-vibe-nine.vercel.app)
+
 ## Стек технологий проекта
 
 - `Next.js (App router & server components)` `TypeScript` `MobX`
