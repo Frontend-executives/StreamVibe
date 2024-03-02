@@ -1,3 +1,4 @@
+import { cx } from 'class-variance-authority'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactElement, ReactNode } from 'react'
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>): ReactElement {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={cx(inter.className, 'bg-black text-white')}>{children}</body>
     </html>
   )
 }
