@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "prepare": "husky install",
     "typecheck": "tsc --module esnext --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
