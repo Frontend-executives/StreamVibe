@@ -1,10 +1,16 @@
 ![logo.svg](public%2Flogo.svg)
 
-## StreamVibe - онлайн кинотеатр
+# StreamVibe - онлайн кинотеатр
 
 ### [Ссылка на дизайн в Figma](https://www.figma.com/file/Yoys5VvZfSvpweIrBHC4mB/OTT-Dark-Theme-Website-UI-Design-Template-for-Media-Streaming%2C-Movies-and-TV-(-FREE-Editable-)-(Community)-(Copy)?type=design&node-id=34-919&mode=design&t=MRPqVq62CcwRAj52-0)
 
-### Как запускать?
+## Стек технологий проекта
+
+- `Next.js (App router & server components)` `TypeScript` `MobX`
+- `TailWind` `PostCss`
+- `ESLint` `Husky` `Lint-staged` `Prettier`
+
+## Как запускать?
 
 1. Убедитесь что у вас установлен `node`
 
