@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactElement, ReactNode } from 'react'
 
-import './globals.css'
+import '@/app/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

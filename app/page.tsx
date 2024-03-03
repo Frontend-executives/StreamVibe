@@ -1,7 +1,9 @@
 import { ReactElement } from 'react'
 
-import { Header } from '@/widgets/core/ui/header'
+import { Home } from '@/pages/home'
 
-export default function Home(): ReactElement {
-  return <Header />
+const HomePage = (): ReactElement => {
+  return <Home />
 }
+
+export default HomePage

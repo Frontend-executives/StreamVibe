@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { Navbar } from '@/features/core/ui/navbar'
+import { Navbar } from '@/entities/core/ui/navbar'
 
 describe('Navbar', () => {
   it('should renders links', () => {

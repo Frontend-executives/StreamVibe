@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { Logo } from '@/features/core/ui/logo'
+import { Logo } from '@/entities/core/ui/logo'
 
 describe('Logo', () => {
   it('should renders logo', () => {

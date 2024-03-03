@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "prepare": "husky install",
     "typecheck": "tsc --module esnext --noEmit",
-    "test": "jest",
+    "test": "jest --maxWorkers=4",
     "test:watch": "jest --watch",
     "test:memory": "jest --runInBand --logHeapUsage",
     "analyze": "$env:ANALYZE=\"true\"; npm run build"

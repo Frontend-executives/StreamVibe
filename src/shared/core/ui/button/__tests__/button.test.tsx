@@ -13,6 +13,14 @@ describe('Button', () => {
     expect(button.textContent).toBe('button text')
   })
 
+  it('should render icon', () => {
+    const { getByTestId } = render(<Button icon={<span data-testid='icon' />} onClick={() => {}} type={'primary'} />)
+
+    const icon = getByTestId('icon')
+
+    expect(icon).toBeInTheDocument()
+  })
+
   it('should render disabled button', () => {
     const { getByRole } = render(<Button isDisabled onClick={() => {}} text={'button text'} type={'primary'} />)
 
