@@ -18,10 +18,19 @@ jest.mock('@/entities/core/ui/navbar', () => {
 })
 
 describe('Header', () => {
-  it('should renders Logo and Navbar', () => {
+  it('should renders Logo', () => {
     const { getByTestId } = render(<Header />)
 
-    expect(getByTestId('logo')).toBeInTheDocument()
-    expect(getByTestId('navbar')).toBeInTheDocument()
+    const logo = getByTestId('logo')
+
+    expect(logo).toBeInTheDocument()
+  })
+
+  it('should renders Navbar', () => {
+    const { getByTestId } = render(<Header />)
+
+    const navbar = getByTestId('navbar')
+
+    expect(navbar).toBeInTheDocument()
   })
 })

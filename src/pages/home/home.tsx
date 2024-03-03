@@ -1,16 +1,17 @@
 import { ReactElement } from 'react'
 
+import { About } from '@/widgets/core/ui/about'
 import { Header } from '@/widgets/core/ui/header'
 
-import { About } from '@/entities/core/ui/about'
+import { Container } from '@/shared/core/ui/container'
 
 export const Home = (): ReactElement => {
   return (
     <>
       <Header />
-      <main>
+      <Container element={'main'}>
         <About />
-      </main>
+      </Container>
     </>
   )
 }

@@ -14,4 +14,12 @@ describe('Container', () => {
 
     expect(content).toBeInTheDocument()
   })
+
+  it('should render correct element', () => {
+    const { getByText } = render(<Container element={'section'}>Container</Container>)
+
+    const container = getByText('Container')
+
+    expect(container.tagName).toBe('SECTION')
+  })
 })

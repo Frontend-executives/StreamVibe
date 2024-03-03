@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReactElement } from 'react'
 
+import { Typography } from '@/shared/core/ui/typography/typography'
+
 const nav = cx(
   //* Блочная модель
   'border-[4px] mobile:hidden',
@@ -39,22 +41,22 @@ export const Navbar = (): ReactElement => {
       <ul className={list}>
         <li>
           <Link className={linkVariants({ isActive: pathname === '/' })} href={'/'}>
-            Home
+            <Typography element={'span'} text={'Home'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
           <Link className={linkVariants({ isActive: pathname === '/movies-and-shows' })} href={'/movies-and-shows'}>
-            Movies & Shows
+            <Typography element={'span'} text={'Movies & Shows'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
           <Link className={linkVariants({ isActive: pathname === '/support' })} href={'/support'}>
-            Support
+            <Typography element={'span'} text={'Support'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
           <Link className={linkVariants({ isActive: pathname === '/subscriptions' })} href={'/subscriptions'}>
-            Subscriptions
+            <Typography element={'span'} text={'Subscriptions'} type={'TextRegular'} />
           </Link>
         </li>
       </ul>

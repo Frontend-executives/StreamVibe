@@ -6,21 +6,21 @@ import { Navbar } from '@/entities/core/ui/navbar'
 
 import { Container } from '@/shared/core/ui/container'
 
-const header = cx(
+const container = cx(
   //* Блочная модель
   'desktop:py-[22px] tablet:py-[18px] mobile:pt-[46px] mobile:pb-[20px]',
-  'flex items-start justify-between gap-4',
+  'flex items-center justify-between gap-4',
+  //* Позиционирование
+  'fixed top-0 left-0 right-0',
   //* Оформление
   'backdrop-blur-lg',
 )
 
 export const Header = (): ReactElement => {
   return (
-    <Container>
-      <header className={header}>
-        <Logo />
-        <Navbar />
-      </header>
+    <Container className={container} element='header'>
+      <Logo />
+      <Navbar />
     </Container>
   )
 }
