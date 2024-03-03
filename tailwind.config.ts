@@ -5,7 +5,9 @@ const config: Config = {
   theme: {
     screens: {
       mobile: { max: '767px' },
+      'after-mobile': { min: '768px' },
       tablet: { min: '768px', max: '1439px' },
+      'before-desktop': { max: '1439px' },
       desktop: { min: '1440px' },
     },
     extend: {
@@ -26,6 +28,8 @@ const config: Config = {
         },
         'ui-red': {
           45: '#E50000',
+          50: '#FF0000',
+          55: '#FF1A1A',
         },
       },
       borderRadius: {
