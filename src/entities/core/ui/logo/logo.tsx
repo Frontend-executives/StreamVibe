@@ -8,7 +8,7 @@ const logo = cx('mobile:w-[116px] mobile:h-[36px] tablet:w-[166px] tablet:h-[50p
 
 export const Logo = (): ReactElement => {
   return (
-    <Link className={link} href='/'>
+    <Link className={link} href='/public'>
       <Image
         alt='StreamVibe logo'
         className={logo}
