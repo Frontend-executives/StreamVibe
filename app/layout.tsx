@@ -14,14 +14,16 @@ export const metadata: Metadata = {
 
 const body = cx(inter.className, 'bg-ui-black-8 text-white')
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: ReactNode
-}>): ReactElement {
+}>): ReactElement => {
   return (
     <html lang='ru'>
       <body className={body}>{children}</body>
     </html>
   )
 }
+
+export default RootLayout
