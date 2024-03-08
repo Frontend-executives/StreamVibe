@@ -1,14 +1,11 @@
 'use client'
 
 import { cx } from 'class-variance-authority'
+import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
-import { ReactElement, useEffect, useState } from 'react'
+import { ReactElement, useMemo } from 'react'
 
-import { getPopularMovies } from '@/widgets/core/api/getPopularMovies'
-
-const DESKTOP_COLUMNS = 9
-const MOBILE_COLUMNS = 3
-const ROWS = 4
+import { BackgroundStore } from '@/widgets/core/model/BackgroundStore'
 
 const container = cx(
   //* Блочная модель
@@ -47,45 +44,11 @@ const image = cx(
   'z-[-1]',
 )
 
-export const Background = (): ReactElement | null => {
-  const [posters, setPosters] = useState<
-    {
-      path: string
-      title: string
-    }[]
-  >([])
-  const [isMobile, setIsMobile] = useState(false)
+const PlaceholderPath = '/images/transparent-logo.svg'
+const IMAGE_SIZE = 200
 
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768)
-
-    window.addEventListener('resize', () => {
-      setIsMobile(window.innerWidth < 768)
-    })
-  }, [])
-
-  useEffect(() => {
-    const getPosters = async (): Promise<void> => {
-      const columns = isMobile ? MOBILE_COLUMNS : DESKTOP_COLUMNS
-      const pagesCount = Math.round((ROWS * columns) / 10)
-      const pageNumbers = Array.from({ length: pagesCount }, (_, index) => index + 1)
-      const requests = pageNumbers.map((page) => getPopularMovies({ page }))
-      const moviesArr = await Promise.all(requests)
-      const posters = moviesArr
-        .map(({ results }) => {
-          return results.map(({ poster_path, title }) => ({
-            title,
-            path: `https://image.tmdb.org/t/p/w500${poster_path}`,
-          }))
-        })
-        .flat(1)
-      const slicedPosters = posters.slice(0, ROWS * columns)
-
-      setPosters(slicedPosters)
-    }
-
-    getPosters()
-  }, [isMobile])
+export const Background = observer((): ReactElement | null => {
+  const { posters } = useMemo(() => new BackgroundStore(), [])
 
   return (
     <div className={container}>
@@ -94,17 +57,17 @@ export const Background = (): ReactElement | null => {
       {posters.map(({ title, path }, index) => (
         <Image
           alt={title}
-          blurDataURL={'/images/transparent-logo.svg'}
+          blurDataURL={PlaceholderPath}
           className={image}
           draggable={false}
-          height={200}
+          height={IMAGE_SIZE}
           key={`${title}-${index}`}
           placeholder={'blur'}
           src={path}
-          width={200}
+          width={IMAGE_SIZE}
         />
       ))}
       <div className={bottomShadow} />
     </div>
   )
-}
+})

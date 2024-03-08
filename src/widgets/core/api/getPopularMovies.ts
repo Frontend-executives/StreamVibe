@@ -17,7 +17,7 @@ type PopularMoviesResults = {
   vote_count: number
 }
 
-type PopularMovies = {
+export type PopularMovies = {
   page: number
   results: PopularMoviesResults[]
   total_pages: number
