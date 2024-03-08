@@ -4,6 +4,8 @@ import { cx } from 'class-variance-authority'
 import Image from 'next/image'
 import { ReactElement } from 'react'
 
+import { Background } from '@/widgets/core/ui/background'
+
 import { Button } from '@/shared/core/ui/button'
 import { Typography } from '@/shared/core/ui/typography'
 
@@ -11,7 +13,6 @@ const title = 'The Best Streaming Experience'
 const text =
   // eslint-disable-next-line max-len
   'StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere.'
-
 const section = cx(
   //* Блочная модель
   'desktop:pt-[196px] tablet:pt-[200px] mobile:pt-[150px]',
@@ -40,10 +41,18 @@ const textClassName = cx(
 export const About = (): ReactElement => {
   return (
     <section className={section}>
-      <Image alt={'transparent logo'} className={image} height={470} src={'/images/transparent-logo.svg'} width={470} />
+      <Image
+        alt={'transparent logo'}
+        className={image}
+        draggable={false}
+        height={470}
+        src={'/images/transparent-logo.svg'}
+        width={470}
+      />
       <Typography className={titleClassName} text={title} type={'HeadingBold'} />
       <Typography className={textClassName} text={text} type={'TextRegular'} />
       <Button onClick={() => {}} text={'Start Watching Now'} type={'primary'} />
+      <Background />
     </section>
   )
 }
