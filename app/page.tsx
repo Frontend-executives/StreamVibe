@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import { Home } from '@/pages/home/ui/home'
+import { Home } from '@/screens/home/ui/home'
 
 const HomePage = (): ReactElement => {
   return <Home />
