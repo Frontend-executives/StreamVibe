@@ -3,6 +3,16 @@ import { render } from '@testing-library/react'
 import { About } from '@/widgets/core/ui/about'
 
 describe('About', () => {
+  beforeAll(() => {
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(() => ({
+        matches: false,
+        onchange: null,
+      })),
+    })
+  })
+
   it('should renders logo', () => {
     const { getByRole } = render(<About />)
 
