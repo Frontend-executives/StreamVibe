@@ -1,9 +1,9 @@
 'use client'
 
-import { cx } from 'class-variance-authority'
+import { cva, cx } from 'class-variance-authority'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
-import { ReactElement, useMemo } from 'react'
+import { ReactElement, useEffect, useMemo } from 'react'
 
 import { BackgroundStore } from '@/widgets/core/model/BackgroundStore'
 
@@ -37,18 +37,34 @@ const bottomShadow = cx(
   //* Оформление
   'bg-gradient-to-t from-ui-black-8',
 )
-const image = cx(
+const staticImage = cx(
   //* Блочная модель
   'w-[100%] aspect-square tablet:aspect-auto rounded-[12px] object-cover',
   //* Позиционирование
   'z-[-1]',
 )
 
+const image = cva(staticImage, {
+  variants: {
+    isAnimated: {
+      true: 'animate-pulse',
+      false: '',
+    },
+  },
+  defaultVariants: {
+    isAnimated: false,
+  },
+})
+
 const PlaceholderPath = '/images/transparent-logo.svg'
 const IMAGE_SIZE = 200
 
 export const Background = observer((): ReactElement | null => {
-  const { posters } = useMemo(() => new BackgroundStore(), [])
+  const { posters, animatedPosterIndex, destroyAnimation } = useMemo(() => new BackgroundStore(), [])
+
+  useEffect(() => {
+    return () => destroyAnimation()
+  }, [destroyAnimation])
 
   return (
     <div className={container}>
@@ -58,7 +74,9 @@ export const Background = observer((): ReactElement | null => {
         <Image
           alt={title}
           blurDataURL={PlaceholderPath}
-          className={image}
+          className={image({
+            isAnimated: index === animatedPosterIndex,
+          })}
           draggable={false}
           height={IMAGE_SIZE}
           key={`${title}-${index}`}

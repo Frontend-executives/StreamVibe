@@ -15,6 +15,8 @@ export type Poster = {
 
 export class BackgroundStore {
   posters: Poster[] = []
+  animatedPosterIndex: number | null = null
+  animationIntervalId: number | null = null
 
   constructor() {
     makeAutoObservable(this)
@@ -50,6 +52,23 @@ export class BackgroundStore {
 
     runInAction((): void => {
       this.posters = posters
+
+      this.setAnimation()
     })
+  }
+
+  setAnimation = (): void => {
+    this.animationIntervalId = setInterval(() => {
+      runInAction(() => {
+        this.animatedPosterIndex = Math.floor(Math.random() * this.posters.length)
+      })
+    }, 2000) as unknown as number
+  }
+
+  destroyAnimation = (): void => {
+    if (this.animationIntervalId) {
+      clearInterval(this.animationIntervalId)
+      this.animationIntervalId = null
+    }
   }
 }
