@@ -1,19 +1,9 @@
 import { ReactElement } from 'react'
 
-import { About } from '@/widgets/core/ui/about'
-import { Header } from '@/widgets/core/ui/header'
-
-import { Container } from '@/shared/core/ui/container'
+import { Home } from '@/screens/home/ui/home'
 
 const HomePage = (): ReactElement => {
-  return (
-    <>
-      <Header />
-      <Container element={'main'}>
-        <About />
-      </Container>
-    </>
-  )
+  return <Home />
 }
 
 export default HomePage
