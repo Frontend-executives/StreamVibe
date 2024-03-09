@@ -7,6 +7,7 @@ const DESKTOP_COLUMNS = 9
 const MOBILE_COLUMNS = 3
 const ROWS = 4
 const MOVIES_FROM_API_PAGE = 20
+const MOBILE_WIDTH = 768
 
 export type Poster = {
   path: string
@@ -17,15 +18,32 @@ export class BackgroundStore {
   posters: Poster[] = []
   animatedPosterIndex: number | null = null
   animationIntervalId: number | null = null
+  mediaQueryList: MediaQueryList | null = null
 
   constructor() {
     makeAutoObservable(this)
 
     this._getPosters()
+    this._setupMediaQueryListener()
+  }
+
+  private _setupMediaQueryListener = (): void => {
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia(`(min-width: ${MOBILE_WIDTH}px)`)
+      mediaQuery.onchange = this._handleMediaQueryChange
+      this.mediaQueryList = mediaQuery
+    }
+  }
+
+  private _handleMediaQueryChange = (): void => {
+    runInAction(() => {
+      this.destroyAnimation()
+      this._getPosters()
+    })
   }
 
   private _checkIsMobile = (): boolean => {
-    return window.innerWidth < 768
+    return typeof window !== 'undefined' ? window.innerWidth < 768 : false
   }
 
   private _getColumnsCount = (): number => {
