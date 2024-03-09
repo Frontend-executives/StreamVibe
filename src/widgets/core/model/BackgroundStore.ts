@@ -46,18 +46,18 @@ export class BackgroundStore {
   }
 
   private _getPosters = async (): Promise<void> => {
-    const moviesPromises = await this._getMoviesPromises()
+    const moviesPromises = this._getMoviesPromises()
     const movies = await Promise.all(moviesPromises)
     const posters = this._adaptMoviesToPosters(movies)
 
     runInAction((): void => {
       this.posters = posters
 
-      this.setAnimation()
+      this._setAnimation()
     })
   }
 
-  setAnimation = (): void => {
+  private _setAnimation = (): void => {
     this.animationIntervalId = setInterval(() => {
       runInAction(() => {
         this.animatedPosterIndex = Math.floor(Math.random() * this.posters.length)
