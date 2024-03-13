@@ -1,7 +1,7 @@
 import { cva, VariantProps } from 'class-variance-authority'
 import { ReactElement } from 'react'
 
-const button = cva(
+const buttonClassName = cva(
   [
     //* Блочная модель
     'flex gap-[4px] items-center justify-center',
@@ -40,7 +40,7 @@ type BaseButtonProps = {
   isLoading?: boolean
   onClick: VoidFunction
   type: 'primary' | 'secondary'
-} & VariantProps<typeof button>
+} & VariantProps<typeof buttonClassName>
 
 type ButtonWithIcon = BaseButtonProps & {
   icon: ReactElement
@@ -70,7 +70,11 @@ export const Button = ({
   const isOnlyIcon = Boolean(icon) && !text
 
   return (
-    <button className={button({ type, isLoading, isOnlyIcon })} disabled={isDisabled || isLoading} onClick={onClick}>
+    <button
+      className={buttonClassName({ type, isLoading, isOnlyIcon })}
+      disabled={isDisabled || isLoading}
+      onClick={onClick}
+    >
       {icon && icon}
       {text && text}
     </button>

@@ -13,12 +13,14 @@ const title = 'The Best Streaming Experience'
 const text =
   // eslint-disable-next-line max-len
   'StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere.'
-const section = cx(
+
+const sectionClassName = cx(
   //* Блочная модель
   'desktop:pt-[196px] tablet:pt-[200px] mobile:pt-[150px]',
+  'desktop:mb-[200px] tablet:mb-[150px] mobile:mb-[100px]',
   'flex flex-col items-center justify-center',
 )
-const image = cx(
+const imageClassName = cx(
   //* Блочная модель
   'desktop:w-[470px] tablet:w-[300px] mobile:w-[200px] desktop:h-[470px] tablet:h-[300px] mobile:h-[200px]',
   'desktop:mb-[130px] tablet:mb-[100px] mobile:mb-[50px]',
@@ -40,10 +42,10 @@ const textClassName = cx(
 
 export const About = (): ReactElement => {
   return (
-    <section className={section}>
+    <section className={sectionClassName}>
       <Image
         alt={'transparent logo'}
-        className={image}
+        className={imageClassName}
         draggable={false}
         height={470}
         src={'/images/transparent-logo.svg'}

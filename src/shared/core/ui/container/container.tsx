@@ -1,7 +1,10 @@
 import { cx } from 'class-variance-authority'
 import { createElement, ReactElement, ReactNode } from 'react'
 
-const container = cx('desktop:px-[162px] tablet:px-[80px] mobile:px-[16px]')
+const containerClassName = cx(
+  //* Блочная модель
+  'desktop:px-[162px] tablet:px-[80px] mobile:px-[16px]',
+)
 
 type ContainerProps = {
   children: ReactNode | ReactNode[]
@@ -13,7 +16,7 @@ export const Container = ({ children, className, element = 'div' }: ContainerPro
   return createElement(
     element,
     {
-      className: cx(container, className),
+      className: cx(containerClassName, className),
     },
     children,
   )
