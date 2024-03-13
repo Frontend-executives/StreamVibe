@@ -13,9 +13,11 @@ const title = 'The Best Streaming Experience'
 const text =
   // eslint-disable-next-line max-len
   'StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere.'
+
 const section = cx(
   //* Блочная модель
   'desktop:pt-[196px] tablet:pt-[200px] mobile:pt-[150px]',
+  'desktop:mb-[200px] tablet:mb-[150px] mobile:mb-[100px]',
   'flex flex-col items-center justify-center',
 )
 const image = cx(
