@@ -7,14 +7,17 @@ import { ReactElement } from 'react'
 
 import { Typography } from '@/shared/core/ui/typography/typography'
 
-const nav = cx(
+const navClassName = cx(
   //* Блочная модель
   'border-[4px] mobile:hidden',
   //* Оформление
   'rounded-r10 border-ui-black-12 bg-ui-black-6',
 )
-const list = cx('flex flex-wrap gap-[8px] p-[8px]')
-const linkVariants = cva(
+const listClassName = cx(
+  //* Блочная модель
+  'flex flex-wrap gap-[8px] p-[8px]',
+)
+const linkClassName = cva(
   [
     //* Блочная модель
     'block rounded-lg',
@@ -37,25 +40,25 @@ export const Navbar = (): ReactElement => {
   const pathname = usePathname()
 
   return (
-    <nav className={nav}>
-      <ul className={list}>
+    <nav className={navClassName}>
+      <ul className={listClassName}>
         <li>
-          <Link className={linkVariants({ isActive: pathname === '/' })} href={'/'}>
+          <Link className={linkClassName({ isActive: pathname === '/' })} href={'/'}>
             <Typography element={'span'} text={'Home'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
-          <Link className={linkVariants({ isActive: pathname === '/movies-and-shows' })} href={'/movies-and-shows'}>
+          <Link className={linkClassName({ isActive: pathname === '/movies-and-shows' })} href={'/movies-and-shows'}>
             <Typography element={'span'} text={'Movies & Shows'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
-          <Link className={linkVariants({ isActive: pathname === '/support' })} href={'/support'}>
+          <Link className={linkClassName({ isActive: pathname === '/support' })} href={'/support'}>
             <Typography element={'span'} text={'Support'} type={'TextRegular'} />
           </Link>
         </li>
         <li>
-          <Link className={linkVariants({ isActive: pathname === '/subscriptions' })} href={'/subscriptions'}>
+          <Link className={linkClassName({ isActive: pathname === '/subscriptions' })} href={'/subscriptions'}>
             <Typography element={'span'} text={'Subscriptions'} type={'TextRegular'} />
           </Link>
         </li>

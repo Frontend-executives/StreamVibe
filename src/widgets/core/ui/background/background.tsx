@@ -7,7 +7,7 @@ import { ReactElement, useEffect, useMemo } from 'react'
 
 import { BackgroundStore } from '@/widgets/core/model/BackgroundStore'
 
-const container = cx(
+const containerClassName = cx(
   //* Блочная модель
   'grid justify-items-center',
   'mobile:grid-cols-3 after-mobile:grid-cols-9 grid-rows-4',
@@ -15,13 +15,13 @@ const container = cx(
   //* Позиционирование
   'absolute top-0 left-0 right-0 z-[-1]',
 )
-const overlay = cx(
+const overlayClassName = cx(
   //* Позиционирование
   'absolute top-0 left-0 right-0 bottom-0 z-[0]',
   //* Оформление
   'bg-black opacity-50',
 )
-const topShadow = cx(
+const topShadowClassName = cx(
   //* Блочная модель
   'h-[200px]',
   //* Позиционирование
@@ -29,7 +29,7 @@ const topShadow = cx(
   //* Оформление
   'bg-gradient-to-b from-ui-black-8',
 )
-const bottomShadow = cx(
+const bottomShadowClassName = cx(
   //* Блочная модель
   'h-[200px]',
   //* Позиционирование
@@ -37,14 +37,13 @@ const bottomShadow = cx(
   //* Оформление
   'bg-gradient-to-t from-ui-black-8',
 )
-const staticImage = cx(
+const staticImageClassName = cx(
   //* Блочная модель
   'w-[100%] aspect-square tablet:aspect-auto rounded-[12px] object-cover',
   //* Позиционирование
   'z-[-1]',
 )
-
-const image = cva(staticImage, {
+const imageClassName = cva(staticImageClassName, {
   variants: {
     isAnimated: {
       true: 'animate-pulse',
@@ -67,14 +66,14 @@ export const Background = observer((): ReactElement | null => {
   }, [destroyAnimation])
 
   return (
-    <div className={container}>
-      <div className={overlay} />
-      <div className={topShadow} />
+    <div className={containerClassName}>
+      <div className={overlayClassName} />
+      <div className={topShadowClassName} />
       {posters.map(({ title, path }, index) => (
         <Image
           alt={title}
           blurDataURL={PlaceholderPath}
-          className={image({
+          className={imageClassName({
             isAnimated: index === animatedPosterIndex,
           })}
           draggable={false}
@@ -85,7 +84,7 @@ export const Background = observer((): ReactElement | null => {
           width={IMAGE_SIZE}
         />
       ))}
-      <div className={bottomShadow} />
+      <div className={bottomShadowClassName} />
     </div>
   )
 })

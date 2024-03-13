@@ -7,12 +7,12 @@ import '@/app/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const bodyClassName = cx(inter.className, 'bg-ui-black-8 text-white')
+
 export const metadata: Metadata = {
   title: 'StreamVibe',
   description: 'Онлайн кинотеатр',
 }
-
-const body = cx(inter.className, 'bg-ui-black-8 text-white')
 
 const RootLayout = ({
   children,
@@ -21,7 +21,7 @@ const RootLayout = ({
 }>): ReactElement => {
   return (
     <html lang='ru'>
-      <body className={body}>{children}</body>
+      <body className={bodyClassName}>{children}</body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ import { Navbar } from '@/entities/core/ui/navbar'
 
 import { Container } from '@/shared/core/ui/container'
 
-const container = cx(
+const containerClassName = cx(
   //* Блочная модель
   'desktop:py-[22px] tablet:py-[18px] mobile:pt-[46px] mobile:pb-[20px]',
   'flex items-center justify-between gap-4',
@@ -18,7 +18,7 @@ const container = cx(
 
 export const Header = (): ReactElement => {
   return (
-    <Container className={container} element='header'>
+    <Container className={containerClassName} element='header'>
       <Logo />
       <Navbar />
     </Container>

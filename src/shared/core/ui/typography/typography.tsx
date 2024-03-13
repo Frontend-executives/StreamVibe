@@ -1,7 +1,7 @@
 import { cva, cx, VariantProps } from 'class-variance-authority'
 import { createElement, ReactElement } from 'react'
 
-const typography = cva('leading-normal', {
+const typographyClassName = cva('leading-normal', {
   variants: {
     type: {
       HeadingBold: 'desktop:text-[58px] tablet:text-[48px] mobile:text-[28px] font-bold',
@@ -17,13 +17,13 @@ type TypographyProps = {
   element?: 'p' | 'span' | 'label' | 'li' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   text: string
   type: 'HeadingBold' | 'TitleBold' | 'TextRegular' | 'SubtitleBold'
-} & VariantProps<typeof typography>
+} & VariantProps<typeof typographyClassName>
 
 export const Typography = ({ text, element = 'p', type, className }: TypographyProps): ReactElement => {
   return createElement(
     element,
     {
-      className: cx(typography({ type }), className),
+      className: cx(typographyClassName({ type }), className),
     },
     text,
   )
