@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { cx } from 'class-variance-authority'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -21,7 +22,10 @@ const RootLayout = ({
 }>): ReactElement => {
   return (
     <html lang='ru'>
-      <body className={bodyClassName}>{children}</body>
+      <body className={bodyClassName}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
