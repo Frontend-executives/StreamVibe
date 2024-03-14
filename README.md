@@ -4,21 +4,24 @@
 
 ### [Ссылка на дизайн в Figma](https://www.figma.com/community/file/1294589591426976269)
 
-### [Ссылка на деплой](https://stream-vibe-nine.vercel.app)
+### [Ссылка на деплой](https://next-stream-vibe.vercel.app)
 
 ## Стек технологий проекта
 
 - `Next.js (App router & server components)` `TypeScript` `MobX`
 - `TailWind` `PostCss`
 - `ESLint` `Husky` `Lint-staged` `Prettier`
+- `Vercel (Preview & Deploy)`
 
 ## Как запускать?
 
-1. Убедитесь что у вас установлен `node`
+1. Убедитесь что у вас установлен `Node.js`
 
-2. Выполните команду `npm run dev`
+2. Установите зависимости проекта: `npm install`
 
-3. Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть результат
+3. Запустите сервер в режиме разработки: `npm run dev`
+
+4. Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть результат
 
 ### NGRok - _открываем localhost:3000 параллельно на другом устройстве_
 
@@ -38,6 +41,12 @@
 
 `npm run typecheck`
 
+### Запуск тестов
+
+- `npm run test`
+- `npm run test:watch` - запуск тестов в watch режиме
+- `npm run test:memory` - запуск тестов в "дебаг" режиме для отслеживания утечек памяти
+
 ### Форматирование файлов
 
 `npm run format`
@@ -45,3 +54,7 @@
 ### Сборка
 
 `npm run build`
+
+### Анализ бандла
+
+`npm run analyze`
