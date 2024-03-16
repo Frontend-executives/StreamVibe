@@ -11,7 +11,7 @@ const linkClassName = cx(
 )
 const logoClassName = cx(
   //* Блочная модель
-  'mobile:w-[116px] mobile:h-[36px] tablet:w-[166px] tablet:h-[50px] desktop:w-[200px] desktop:h-[60px]',
+  'mobile:w-116px mobile:h-36px tablet:w-166px tablet:h-50px desktop:w-200px desktop:h-60px',
 )
 
 export const Logo = (): ReactElement => {

@@ -7,16 +7,16 @@ import { Typography } from '@/shared/core/ui/typography'
 const containerClassName = cx(
   //* Блочная модель
   'flex flex-col',
-  'desktop:gap-[30px] tablet:gap-[24px] mobile:gap-[20px]',
-  'desktop:p-[50px] tablet:p-[40px] mobile:p-[24px]',
+  'desktop:gap-30px tablet:gap-6 mobile:gap-5',
+  'desktop:p-50px tablet:p-10 mobile:p-6',
   //* Оформление
-  'border-2 border-ui-black-15 rounded-[12px]',
+  'border-2 border-ui-black-15 rounded-xl',
   'bg-gradient-to-tr from-50% from-ui-black-0 to-ui-red-10',
 )
 const headerClassName = cx(
   //* Блочная модель
   'flex items-center flex-wrap',
-  'desktop:gap-[16px] tablet:gap-[12px] mobile:gap-[10px]',
+  'desktop:gap-4 tablet:gap-3 mobile:gap-2.5',
 )
 const imageWrapperClassName = cx(
   //* Блочная модель

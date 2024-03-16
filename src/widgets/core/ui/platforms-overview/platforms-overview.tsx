@@ -8,13 +8,13 @@ import { SectionHeader } from '@/shared/core/ui/section-header'
 const sectionClassName = cx(
   //* Блочная модель
   'flex flex-col',
-  'desktop:gap-[80px] tablet:gap-[60px] mobile:gap-[40px]',
-  'desktop:pb-[150px] tablet:pb-[120px] mobile:pb-[80px]',
+  'desktop:gap-20 tablet:gap-60px mobile:gap-10',
+  'desktop:pb-150px tablet:pb-120px mobile:pb-20',
 )
 const listClassName = cx(
   //* Блочная модель
   'grid',
-  'desktop:gap-[30px] before-desktop:gap-[20px]',
+  'desktop:gap-30px before-desktop:gap-5',
   'desktop:grid-cols-3 before-desktop:grid-cols-1',
 )
 

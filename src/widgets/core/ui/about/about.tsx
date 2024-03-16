@@ -16,24 +16,25 @@ const text =
 
 const sectionClassName = cx(
   //* Блочная модель
-  'desktop:pt-[196px] tablet:pt-[200px] mobile:pt-[150px]',
-  'desktop:mb-[200px] tablet:mb-[150px] mobile:mb-[100px]',
+  'desktop:pt-196px tablet:pt-50px mobile:pt-150px',
+  'desktop:mb-50px tablet:mb-150px mobile:mb-100px',
   'flex flex-col items-center justify-center',
 )
 const imageClassName = cx(
   //* Блочная модель
-  'desktop:w-[470px] tablet:w-[300px] mobile:w-[200px] desktop:h-[470px] tablet:h-[300px] mobile:h-[200px]',
-  'desktop:mb-[130px] tablet:mb-[100px] mobile:mb-[50px]',
+  'desktop:w-470px tablet:w-300px mobile:w-200px',
+  'desktop:h-470px tablet:h-300px mobile:h-200px',
+  'desktop:mb-130px tablet:mb-100px mobile:mb-50px',
 )
 const titleClassName = cx(
   //* Блочная модель
-  'desktop:mb-[16px] before-desktop:mb-[10px]',
+  'desktop:mb-4 before-desktop:mb-2.5',
   //* Типографика
   'text-center',
 )
 const textClassName = cx(
   //* Блочная модель
-  'desktop:mb-[50px] tablet:mb-[40px] mobile:mb-[30px]',
+  'desktop:mb-50px tablet:mb-10 mobile:mb-30px',
   //* Оформление
   'text-ui-grey-60',
   //* Типографика

@@ -11,7 +11,7 @@ const containerClassName = cx(
   //* Блочная модель
   'grid justify-items-center',
   'mobile:grid-cols-3 after-mobile:grid-cols-9 grid-rows-4',
-  'before-desktop:gap-[10px] desktop:gap-[20px]',
+  'before-desktop:gap-2.5 desktop:gap-5',
   //* Позиционирование
   'absolute top-0 left-0 right-0 z-[-1]',
 )
@@ -23,7 +23,7 @@ const overlayClassName = cx(
 )
 const topShadowClassName = cx(
   //* Блочная модель
-  'h-[200px]',
+  'h-200px',
   //* Позиционирование
   'absolute top-0 left-0 right-0 z-[0]',
   //* Оформление
@@ -31,7 +31,7 @@ const topShadowClassName = cx(
 )
 const bottomShadowClassName = cx(
   //* Блочная модель
-  'h-[200px]',
+  'h-200px',
   //* Позиционирование
   'absolute bottom-0 left-0 right-0 z-[0]',
   //* Оформление
@@ -39,7 +39,7 @@ const bottomShadowClassName = cx(
 )
 const staticImageClassName = cx(
   //* Блочная модель
-  'w-[100%] aspect-square tablet:aspect-auto rounded-[12px] object-cover',
+  'w-full aspect-square tablet:aspect-auto rounded-xl object-cover',
   //* Позиционирование
   'z-[-1]',
 )

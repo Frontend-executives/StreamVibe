@@ -9,20 +9,20 @@ import { Typography } from '@/shared/core/ui/typography/typography'
 
 const navClassName = cx(
   //* Блочная модель
-  'border-[4px] mobile:hidden',
+  'border-4 mobile:hidden',
   //* Оформление
-  'rounded-r10 border-ui-black-12 bg-ui-black-6',
+  'desktop:rounded-xl before-desktop:rounded-10px border-ui-black-12 bg-ui-black-6',
 )
 const listClassName = cx(
   //* Блочная модель
-  'flex flex-wrap gap-[8px] p-[8px]',
+  'flex flex-wrap gap-2 p-2',
 )
 const linkClassName = cva(
   [
     //* Блочная модель
     'block rounded-lg',
-    'desktop:px-[24px] desktop:py-[14px]',
-    'tablet:px-[20px] tablet:py-[12px]',
+    'desktop:px-6 desktop:py-3.5',
+    'tablet:px-5 tablet:py-3',
     //* Анимация
     'hover:bg-ui-black-10 transition-colors',
   ],
@@ -42,6 +42,7 @@ export const Navbar = (): ReactElement => {
   return (
     <nav className={navClassName}>
       <ul className={listClassName}>
+        {/*TODO: Промапить ссылки*/}
         <li>
           <Link className={linkClassName({ isActive: pathname === '/' })} href={'/'}>
             <Typography element={'span'} text={'Home'} type={'TextRegular'} />
