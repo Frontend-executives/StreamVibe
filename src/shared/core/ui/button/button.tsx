@@ -4,7 +4,7 @@ import { ReactElement } from 'react'
 const buttonClassName = cva(
   [
     //* Блочная модель
-    'flex gap-[4px] items-center justify-center',
+    'flex gap-1 items-center justify-center',
     //* Оформление
     'rounded-lg disabled:bg-ui-grey-60 disabled:pointer-events-none select-none',
     //* Типографика
@@ -23,8 +23,8 @@ const buttonClassName = cva(
         false: '',
       },
       isOnlyIcon: {
-        true: 'p-[12px]',
-        false: 'px-[24px] before-desktop:py-[14px] desktop:py-[18px]',
+        true: 'p-3',
+        false: 'px-6 before-desktop:py-3.5 desktop:py-18px',
       },
     },
     defaultVariants: {

@@ -8,7 +8,7 @@ import { Container } from '@/shared/core/ui/container'
 
 const containerClassName = cx(
   //* Блочная модель
-  'desktop:py-[22px] tablet:py-[18px] mobile:pt-[46px] mobile:pb-[20px]',
+  'desktop:py-22px tablet:py-18px mobile:pt-46px mobile:pb-5',
   'flex items-center justify-between gap-4',
   //* Позиционирование
   'fixed top-0 left-0 right-0',

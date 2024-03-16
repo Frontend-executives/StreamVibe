@@ -3,7 +3,7 @@ import { createElement, ReactElement, ReactNode } from 'react'
 
 const containerClassName = cx(
   //* Блочная модель
-  'desktop:px-[162px] tablet:px-[80px] mobile:px-[16px]',
+  'desktop:px-162px tablet:px-20 mobile:px-4',
 )
 
 type ContainerProps = {

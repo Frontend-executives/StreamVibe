@@ -6,7 +6,7 @@ import { Typography } from '@/shared/core/ui/typography'
 const headerClassName = cx(
   //* Блочная модель
   'flex flex-col',
-  'desktop:gap-[14px] before-desktop:gap-[10px]',
+  'desktop:gap-3.5 before-desktop:gap-2.5',
 )
 const textClassName = cx(
   //* Оформление
