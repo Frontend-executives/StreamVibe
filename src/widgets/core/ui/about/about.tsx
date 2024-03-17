@@ -17,7 +17,7 @@ const text =
 const sectionClassName = cx(
   //* Блочная модель
   'desktop:pt-196px tablet:pt-50px mobile:pt-150px',
-  'desktop:mb-50px tablet:mb-150px mobile:mb-100px',
+  'desktop:mb-50px tablet:mb-30px mobile:mb-5',
   'flex flex-col items-center justify-center',
 )
 const imageClassName = cx(

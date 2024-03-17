@@ -9,7 +9,6 @@ const sectionClassName = cx(
   //* Блочная модель
   'flex flex-col',
   'desktop:gap-20 tablet:gap-60px mobile:gap-10',
-  'desktop:pb-150px tablet:pb-120px mobile:pb-20',
 )
 const listClassName = cx(
   //* Блочная модель
