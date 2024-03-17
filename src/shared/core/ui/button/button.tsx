@@ -8,7 +8,7 @@ const buttonClassName = cva(
     //* Оформление
     'rounded-lg disabled:bg-ui-grey-60 disabled:pointer-events-none select-none',
     //* Типографика
-    'desktop:text-lg before-desktop:text-sm',
+    'desktop:text-lg before-desktop:text-sm whitespace-nowrap',
     //* Анимация
     'active:scale-95 transition-all',
   ],

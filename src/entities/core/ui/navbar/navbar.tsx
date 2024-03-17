@@ -42,7 +42,7 @@ export const Navbar = (): ReactElement => {
   return (
     <nav className={navClassName}>
       <ul className={listClassName}>
-        {/*TODO: Промапить ссылки*/}
+        {/* TODO - сложить в массив и промапить */}
         <li>
           <Link className={linkClassName({ isActive: pathname === '/' })} href={'/'}>
             <Typography element={'span'} text={'Home'} type={'TextRegular'} />
