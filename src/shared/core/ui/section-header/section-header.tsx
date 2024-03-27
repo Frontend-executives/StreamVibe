@@ -28,8 +28,8 @@ export const SectionHeader = ({ title, text, component }: SectionHeaderProps): R
   return (
     <header className={headerClassName}>
       <div className={wrapperClassName}>
-        <Typography text={title} type={'TitleBold'} />
-        <Typography className={textClassName} text={text} type={'TextRegular'} />
+        <Typography text={title} type='TitleBold' />
+        <Typography className={textClassName} text={text} type='TextRegular' />
       </div>
       {component && component}
     </header>

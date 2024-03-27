@@ -50,9 +50,9 @@ export const Platform = ({ icon, text, title }: PlatformProps): ReactElement => 
         <div className={imageWrapperClassName}>
           <Image alt={title} className={imageClassName} height={40} src={icon} width={40} />
         </div>
-        <Typography text={title} type={'SubtitleBold'} />
+        <Typography text={title} type='SubtitleBold' />
       </header>
-      <Typography className={textClassName} text={text} type={'TextRegular'} />
+      <Typography className={textClassName} text={text} type='TextRegular' />
     </li>
   )
 }

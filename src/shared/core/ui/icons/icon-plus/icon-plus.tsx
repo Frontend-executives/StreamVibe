@@ -9,5 +9,5 @@ const imageClassName = cx(
 )
 
 export const IconPlus = (): ReactElement => {
-  return <Image alt={'plus icon'} className={imageClassName} height={30} src={'/icons/plus.svg'} width={30} />
+  return <Image alt='plus icon' className={imageClassName} height={30} src='/icons/plus.svg' width={30} />
 }

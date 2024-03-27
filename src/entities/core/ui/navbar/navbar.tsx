@@ -44,23 +44,23 @@ export const Navbar = (): ReactElement => {
       <ul className={listClassName}>
         {/* TODO - сложить в массив и промапить */}
         <li>
-          <Link className={linkClassName({ isActive: pathname === '/' })} href={'/'}>
-            <Typography element={'span'} text={'Home'} type={'TextRegular'} />
+          <Link className={linkClassName({ isActive: pathname === '/' })} href='/'>
+            <Typography element='span' text='Home' type='TextRegular' />
           </Link>
         </li>
         <li>
-          <Link className={linkClassName({ isActive: pathname === '/movies-and-shows' })} href={'/movies-and-shows'}>
-            <Typography element={'span'} text={'Movies & Shows'} type={'TextRegular'} />
+          <Link className={linkClassName({ isActive: pathname === '/movies-and-shows' })} href='/movies-and-shows'>
+            <Typography element='span' text='Movies & Shows' type='TextRegular' />
           </Link>
         </li>
         <li>
-          <Link className={linkClassName({ isActive: pathname === '/support' })} href={'/support'}>
-            <Typography element={'span'} text={'Support'} type={'TextRegular'} />
+          <Link className={linkClassName({ isActive: pathname === '/support' })} href='/support'>
+            <Typography element='span' text='Support' type='TextRegular' />
           </Link>
         </li>
         <li>
-          <Link className={linkClassName({ isActive: pathname === '/subscriptions' })} href={'/subscriptions'}>
-            <Typography element={'span'} text={'Subscriptions'} type={'TextRegular'} />
+          <Link className={linkClassName({ isActive: pathname === '/subscriptions' })} href='/subscriptions'>
+            <Typography element='span' text='Subscriptions' type='TextRegular' />
           </Link>
         </li>
       </ul>

@@ -56,11 +56,11 @@ export const Question = observer(({ order, title, text }: QuestionProps): ReactE
   return (
     <li className={questionClassName}>
       <div className={orderClassName}>
-        <Typography text={order} type={'faqOrder'} />
+        <Typography text={order} type='faqOrder' />
       </div>
       <div className={wrapperClassName}>
-        <Typography text={title} type={'faqTitle'} />
-        {isOpen && <Typography className={textClassName} text={text} type={'faqText'} />}
+        <Typography text={title} type='faqTitle' />
+        {isOpen && <Typography className={textClassName} text={text} type='faqText' />}
       </div>
       <button className={buttonClassName} onClick={isOpen ? onClose : onOpen}>
         {isOpen ? <IconMinus /> : <IconPlus />}

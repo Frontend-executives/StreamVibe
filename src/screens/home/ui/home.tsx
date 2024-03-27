@@ -18,7 +18,7 @@ export const Home = async (): Promise<ReactElement> => {
   return (
     <>
       <Header />
-      <Container className={containerClassName} element={'main'}>
+      <Container className={containerClassName} element='main'>
         <About />
         <PlatformsOverview />
         <Faq />

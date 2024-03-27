@@ -45,16 +45,16 @@ export const About = (): ReactElement => {
   return (
     <section className={sectionClassName}>
       <Image
-        alt={'transparent logo'}
+        alt='transparent logo'
         className={imageClassName}
         draggable={false}
         height={470}
-        src={'/images/transparent-logo.svg'}
+        src='/images/transparent-logo.svg'
         width={470}
       />
-      <Typography className={titleClassName} text={title} type={'HeadingBold'} />
-      <Typography className={textClassName} text={text} type={'TextRegular'} />
-      <Button onClick={() => {}} text={'Start Watching Now'} type={'primary'} />
+      <Typography className={titleClassName} text={title} type='HeadingBold' />
+      <Typography className={textClassName} text={text} type='TextRegular' />
+      <Button onClick={() => {}} text='Start Watching Now' type='primary' />
       <Background />
     </section>
   )

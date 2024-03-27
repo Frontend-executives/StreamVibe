@@ -4,7 +4,7 @@ import { Typography } from '@/shared/core/ui/typography'
 
 describe('Typography', () => {
   it('should renders correct element', () => {
-    const { getByText } = render(<Typography element={'h1'} text={'Typography'} type={'HeadingBold'} />)
+    const { getByText } = render(<Typography element='h1' text='Typography' type='HeadingBold' />)
 
     const typography = getByText('Typography')
 
@@ -12,7 +12,7 @@ describe('Typography', () => {
   })
 
   it('should renders text', () => {
-    const { getByText } = render(<Typography text={'Typography'} type={'HeadingBold'} />)
+    const { getByText } = render(<Typography text='Typography' type='HeadingBold' />)
 
     const typography = getByText('Typography')
 
@@ -20,7 +20,7 @@ describe('Typography', () => {
   })
 
   it('should renders passing class name', () => {
-    const { getByText } = render(<Typography className={'text-red-500'} text={'Typography'} type={'HeadingBold'} />)
+    const { getByText } = render(<Typography className='text-red-500' text='Typography' type='HeadingBold' />)
 
     const typography = getByText('Typography')
 
