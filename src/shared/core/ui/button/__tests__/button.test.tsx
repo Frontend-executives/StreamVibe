@@ -4,7 +4,7 @@ import { Button } from '@/shared/core/ui/button'
 
 describe('Button', () => {
   it('should render text', () => {
-    const { getByRole } = render(<Button onClick={() => {}} text={'button text'} type={'primary'} />)
+    const { getByRole } = render(<Button onClick={() => {}} text='button text' type='primary' />)
 
     const button = getByRole('button', {
       name: 'button text',
@@ -14,7 +14,7 @@ describe('Button', () => {
   })
 
   it('should render icon', () => {
-    const { getByTestId } = render(<Button icon={<span data-testid='icon' />} onClick={() => {}} type={'primary'} />)
+    const { getByTestId } = render(<Button icon={<span data-testid='icon' />} onClick={() => {}} type='primary' />)
 
     const icon = getByTestId('icon')
 
@@ -22,7 +22,7 @@ describe('Button', () => {
   })
 
   it('should render disabled button', () => {
-    const { getByRole } = render(<Button isDisabled onClick={() => {}} text={'button text'} type={'primary'} />)
+    const { getByRole } = render(<Button isDisabled onClick={() => {}} text='button text' type='primary' />)
 
     const button = getByRole('button', {
       name: 'button text',
@@ -33,7 +33,7 @@ describe('Button', () => {
 
   it('should call onClick function', () => {
     const onClick = jest.fn()
-    const { getByRole } = render(<Button onClick={onClick} text={'button text'} type={'primary'} />)
+    const { getByRole } = render(<Button onClick={onClick} text='button text' type='primary' />)
 
     const button = getByRole('button', {
       name: 'button text',

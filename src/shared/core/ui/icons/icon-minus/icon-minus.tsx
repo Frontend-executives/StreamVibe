@@ -9,5 +9,5 @@ const imageClassName = cx(
 )
 
 export const IconMinus = (): ReactElement => {
-  return <Image alt={'minus icon'} className={imageClassName} height={30} src={'/icons/minus.svg'} width={30} />
+  return <Image alt='minus icon' className={imageClassName} height={30} src='/icons/minus.svg' width={30} />
 }

@@ -62,6 +62,10 @@
         "when": "never"
       }
     ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never" }
+    ],
     "react/jsx-indent-props": [
       "error",
       2

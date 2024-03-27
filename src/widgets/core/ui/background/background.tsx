@@ -79,7 +79,7 @@ export const Background = observer((): ReactElement | null => {
           draggable={false}
           height={IMAGE_SIZE}
           key={`${title}-${index}`}
-          placeholder={'blur'}
+          placeholder='blur'
           src={path}
           width={IMAGE_SIZE}
         />
