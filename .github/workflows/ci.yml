@@ -5,13 +5,26 @@ on:
     types: [opened, synchronize, reopened, edited]
 
 jobs:
-  Comprehensive_Code_Validation:
-    name: Comprehensive Code Validation (types/linting/tests)
+  comprehensive_code_validation:
+    name: Comprehensive Code Validation
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Type Checking
+            command: npm run typecheck
+          - name: Linting
+            command: npm run lint
+          - name: Run Tests
+            command: npm run test
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run test
+      - name: ${{ matrix.name }}
+        run: ${{ matrix.command }}
