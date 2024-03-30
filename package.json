@@ -13,7 +13,9 @@
     "test": "jest --maxWorkers=4",
     "test:watch": "jest --watch",
     "test:memory": "jest --runInBand --logHeapUsage",
-    "analyze": "$env:ANALYZE=\"true\"; npm run build"
+    "analyze": "$env:ANALYZE=\"true\"; npm run build",
+    "docker:build": "docker build -t stream-vibe .",
+    "docker:run": "docker run -p 3000:3000 -d stream-vibe"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.1.1",
