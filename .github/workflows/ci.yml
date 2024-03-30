@@ -1,41 +1,30 @@
-name: Workflow
+name: Code Quality Gate
 
 on:
   pull_request:
-    types: [ opened, synchronize, reopened, edited ]
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
-  typecheck:
-    name: Run types check
+  comprehensive_code_validation:
+    name: Comprehensive Code Validation
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-      - run: npm install
-      - run: npm run typecheck
 
-  eslint:
-    name: Run ESLint
-    runs-on: ubuntu-latest
-    needs: typecheck
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-      - run: npm install
-      - run: npm run lint
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Type Checking
+            command: npm run typecheck
+          - name: Linting
+            command: npm run lint
+          - name: Run Tests
+            command: npm run test
 
-  tests:
-    name: Run tests
-    runs-on: ubuntu-latest
-    needs: eslint
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run test
+      - name: ${{ matrix.name }}
+        run: ${{ matrix.command }}
