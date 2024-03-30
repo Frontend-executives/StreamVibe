@@ -9,6 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:memory": "jest --runInBand --logHeapUsage",
+    "validate": "npm run typecheck & npm run lint & npm run test",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
