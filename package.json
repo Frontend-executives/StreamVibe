@@ -7,7 +7,6 @@
     "typecheck": "tsc --module esnext --noEmit",
     "lint": "next lint",
     "test": "jest",
-    "test:only": "jest",
     "test:watch": "jest --watch",
     "test:memory": "jest --runInBand --logHeapUsage",
     "dev": "next dev",
