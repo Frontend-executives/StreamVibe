@@ -6,7 +6,9 @@ import { Typography } from '@/shared/core/ui/typography'
 
 const cardClassName = cx(
   //* Блочная модель
-  'p-[30px] max',
+  'p-[30px] max-w-[295px]',
+
+  'bg-ui-black-10 rounded-r12',
 )
 
 const cardContentClassName = cx(
@@ -14,11 +16,18 @@ const cardContentClassName = cx(
   'flex justify-between',
 )
 
-export const GenreCard = (): ReactElement => {
+type CardProps = {
+  image: string
+  link?: string
+  name: string
+}
+
+export const GenreCard = ({ name, image }: CardProps): ReactElement => {
   return (
     <div className={cardClassName}>
+      <Image alt='card image' height={252} src={image} width={237} />
       <div className={cardContentClassName}>
-        <Typography text='123' type='TextRegular' />
+        <Typography text={name} type='TextRegular' />
         <Image
           alt='card arrow'
           className='card__arrow'
