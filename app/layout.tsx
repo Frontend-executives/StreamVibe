@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { cx } from 'class-variance-authority'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactElement, ReactNode } from 'react'
 
@@ -11,9 +11,21 @@ const inter = Inter({ subsets: ['latin'] })
 
 const bodyClassName = cx(inter.className, 'bg-ui-black-8 text-white')
 
+export const viewport: Viewport = {
+  themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#fff' }],
+}
+
 export const metadata: Metadata = {
-  title: 'StreamVibe',
-  description: 'Онлайн кинотеатр',
+  title: 'Stream Vibe',
+  description: 'Online cinema app',
+  generator: 'Next.js',
+  manifest: '/manifest.json',
+  keywords: ['online cinema'],
+  authors: [{ name: 'Kirill Shashichev' }],
+  icons: [
+    { rel: 'apple-touch-icon', url: 'icons/icon-128x128.png' },
+    { rel: 'icon', url: 'icons/icon-128x128.png' },
+  ],
 }
 
 const RootLayout = ({
