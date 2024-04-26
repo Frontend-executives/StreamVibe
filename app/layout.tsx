@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 const bodyClassName = cx(inter.className, 'bg-ui-black-8 text-white')
 
 export const viewport: Viewport = {
-  themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#fff' }],
+  themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#141414' }],
 }
 
 export const metadata: Metadata = {
