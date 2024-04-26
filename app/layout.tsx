@@ -7,6 +7,8 @@ import { ReactElement, ReactNode } from 'react'
 
 import '@/app/styles/globals.css'
 
+import { ServiceWorkerProvider } from '@/shared/core/providers/service-worker-provider'
+
 const inter = Inter({ subsets: ['latin'] })
 
 const bodyClassName = cx(inter.className, 'bg-ui-black-8 text-white')
@@ -24,7 +26,7 @@ const RootLayout = ({
   return (
     <html lang='ru'>
       <body className={bodyClassName}>
-        {children}
+        <ServiceWorkerProvider>{children}</ServiceWorkerProvider>
         <SpeedInsights />
         <Analytics />
       </body>
