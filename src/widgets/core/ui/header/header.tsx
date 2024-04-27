@@ -11,7 +11,7 @@ const containerClassName = cx(
   'desktop:py-22px tablet:py-18px mobile:pt-46px mobile:pb-5',
   'flex items-center justify-between gap-4',
   //* Позиционирование
-  'fixed top-0 left-0 right-0',
+  'fixed top-0 left-0 right-0 z-50',
   //* Оформление
   'backdrop-blur-lg',
 )

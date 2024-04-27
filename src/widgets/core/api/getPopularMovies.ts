@@ -53,10 +53,8 @@ type GetPopularMoviesParams = {
   page?: number
 }
 
-export const POPULAR_MOVIES_SLUG = 'movie/popular'
-
 export const getPopularMovies = async ({ page = 1 }: GetPopularMoviesParams): Promise<PopularMovies | never> => {
-  const { success, data } = await GET<PopularMoviesRaw>({ url: `${POPULAR_MOVIES_SLUG}?language=en-US&page=${page}` })
+  const { success, data } = await GET<PopularMoviesRaw>({ url: `'movie/popular'?language=en-US&page=${page}` })
 
   if (!success) {
     throw new Error('Не удалось запросить популярные фильмы')
