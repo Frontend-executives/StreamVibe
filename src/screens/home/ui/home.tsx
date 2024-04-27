@@ -3,6 +3,7 @@ import { ReactElement } from 'react'
 
 import { About } from '@/widgets/core/ui/about'
 import { Faq } from '@/widgets/core/ui/faq'
+import { Footer } from '@/widgets/core/ui/footer'
 import { Header } from '@/widgets/core/ui/header'
 import { PlatformsOverview } from '@/widgets/core/ui/platforms-overview'
 
@@ -23,6 +24,7 @@ export const Home = async (): Promise<ReactElement> => {
         <PlatformsOverview />
         <Faq />
       </Container>
+      <Footer />
     </>
   )
 }
