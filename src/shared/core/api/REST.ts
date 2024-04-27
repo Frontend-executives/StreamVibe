@@ -9,7 +9,7 @@ type RequestData = {
   url: string
 }
 
-export const GET = async <ResponseType>({ url }: RequestData): Promise<ResponseData<ResponseType>> => {
+export const GET = async <ResponseType>({ url }: RequestData): Promise<ResponseData<ResponseType | null>> => {
   try {
     const { data } = await axiosInstance.get<ResponseType>(url)
 
@@ -19,7 +19,7 @@ export const GET = async <ResponseType>({ url }: RequestData): Promise<ResponseD
     }
   } catch (error: unknown) {
     return {
-      data: {} as ResponseType,
+      data: null,
       success: false,
     }
   }

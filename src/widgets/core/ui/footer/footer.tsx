@@ -30,7 +30,7 @@ export const Footer = (): ReactElement => {
       <Image alt='TMDB logo' className={tmdbLogoClassName} height={50} src='/images/TMDB.svg' width={100} />
       <Typography
         className={captionClassName}
-        text='This product uses the TMDB API but is not endorsed or certified by TMDB'
+        text='This product uses the TMDB API but is not endorsed or certified by TMDB.'
         type='footerCaption'
       />
     </Container>
