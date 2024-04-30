@@ -9,6 +9,8 @@ const manifest = (): MetadataRoute.Manifest => ({
   display: 'fullscreen',
   name: PROJECT_TITLE,
   theme_color: '#141414',
+  scope: '/',
+  start_url: '/',
   short_name: PROJECT_TITLE,
   icons: [
     {
