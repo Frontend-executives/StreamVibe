@@ -12,6 +12,22 @@ const manifest = (): MetadataRoute.Manifest => ({
   scope: '/',
   start_url: '/',
   short_name: PROJECT_TITLE,
+  screenshots: [
+    {
+      src: '/PWA/desktop_screenshot.png',
+      sizes: '3840x2160',
+      type: 'image/png',
+      // @ts-ignore
+      form_factor: 'wide',
+    },
+    {
+      src: '/PWA/mobile_screenshot.png',
+      sizes: '1290x2796',
+      type: 'image/png',
+      // @ts-ignore
+      form_factor: 'narrow',
+    },
+  ],
   icons: [
     {
       src: '/PWA/icon-192x192.png',
