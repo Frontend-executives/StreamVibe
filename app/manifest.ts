@@ -6,7 +6,7 @@ const manifest = (): MetadataRoute.Manifest => ({
   background_color: '#141414',
   categories: ['entertainment '],
   description: PROJECT_DESCRIPTION,
-  display: 'fullscreen',
+  display: 'standalone',
   name: PROJECT_TITLE,
   theme_color: '#141414',
   scope: '/',
