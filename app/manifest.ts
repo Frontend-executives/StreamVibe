@@ -1,15 +1,15 @@
 import { MetadataRoute } from 'next'
 
+import { PROJECT_DESCRIPTION, PROJECT_TITLE } from '@/shared/core/utils/constants'
+
 const manifest = (): MetadataRoute.Manifest => ({
   background_color: '#141414',
   categories: ['entertainment '],
-  description:
-    // eslint-disable-next-line max-len
-    'Погрузитесь в мир кино со StreamVibe, вашим надёжным помощником для просмотра фильмов и сериалов. Наслаждайтесь подборкой контента, адаптированной под любой вкус, и открывайте для себя новые шедевры в любом месте. Независимо от того, являетесь ли вы киноманом или просто ищете что-то для просмотра, StreamVibe приносит магию кино прямо в ваши руки.',
+  description: PROJECT_DESCRIPTION,
   display: 'fullscreen',
-  name: 'Stream Vibe',
+  name: PROJECT_TITLE,
   theme_color: '#141414',
-  short_name: 'StreamVibe',
+  short_name: PROJECT_TITLE,
   icons: [
     {
       src: '/icon-192x192.png',
