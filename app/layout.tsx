@@ -4,9 +4,13 @@ import { cx } from 'class-variance-authority'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ReactElement, ReactNode } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import '@/app/styles/globals.css'
 
+import { NetworkManager } from '@/shared/core/ui/network-manager'
+import { ServiceWorker } from '@/shared/core/ui/service-worker'
 import { PROJECT_DESCRIPTION, PROJECT_TITLE } from '@/shared/core/utils/constants'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,8 +31,11 @@ const RootLayout = ({
     <html lang='ru'>
       <body className={bodyClassName}>
         {children}
+        <ServiceWorker />
         <SpeedInsights />
         <Analytics />
+        <ToastContainer theme='dark' />
+        <NetworkManager />
       </body>
     </html>
   )
